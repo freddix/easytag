@@ -1,16 +1,17 @@
 Summary:	ID3 tag editor
 Name:		easytag
-Version:	2.1.8
+Version:	2.1.9
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://download.gnome.org/sources/easytag/2.1/%{name}-%{version}.tar.xz
-# Source0-md5:	5eb6ae2dc7f6d6ecbf7ea6ba230c7ea1
+# Source0-md5:	789c1e6d3f653374a916b7f503ee1977
 URL:		http://easytag.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	flac-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+3-devel
+BuildRequires:	id3lib-devel
 BuildRequires:	id3lib-devel
 BuildRequires:	libid3tag-devel
 BuildRequires:	libogg-devel
@@ -32,6 +33,7 @@ and nice GTK+ interface makes tagging easier.
 
 %build
 %configure \
+	--disable-silent-rules	\
 	--with-gtk3
 %{__make}
 
@@ -43,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 desktop-file-validate $RPM_BUILD_ROOT%{_desktopdir}/easytag.desktop
 
-%find_lang %{name} --all-name
+%find_lang %{name} --all-name --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
