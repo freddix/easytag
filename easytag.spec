@@ -1,11 +1,11 @@
 Summary:	ID3 tag editor
 Name:		easytag
-Version:	2.1.10
+Version:	2.2.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
-Source0:	http://download.gnome.org/sources/easytag/2.1/%{name}-%{version}.tar.xz
-# Source0-md5:	feafcd13508c26171f1376aa4b0629c4
+Source0:	http://download.gnome.org/sources/easytag/2.2/%{name}-%{version}.tar.xz
+# Source0-md5:	3c0961b754b037514bf7383ad01beaf3
 URL:		http://easytag.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	flac-devel
@@ -18,7 +18,7 @@ BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	pkg-config
 BuildRequires:	speex-devel
-BuildRequires:	taglib-devel
+BuildRequires:	taglib-devel >= 1.9.1
 Requires(post,postun):	/usr/bin/gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
