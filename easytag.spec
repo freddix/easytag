@@ -33,8 +33,7 @@ and nice GTK+ interface makes tagging easier.
 
 %build
 %configure \
-	--disable-silent-rules	\
-	--with-gtk3
+	--disable-silent-rules
 %{__make}
 
 %install
