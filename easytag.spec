@@ -1,11 +1,11 @@
 Summary:	ID3 tag editor
 Name:		easytag
-Version:	2.2.1
+Version:	2.2.4
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://download.gnome.org/sources/easytag/2.2/%{name}-%{version}.tar.xz
-# Source0-md5:	3229272b5e48862155f756cb30556114
+# Source0-md5:	89cd9871406188212ea3b4a0738ff463
 URL:		http://easytag.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	flac-devel
